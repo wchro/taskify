@@ -128,7 +128,7 @@ document
 // START
 (() => {
   !localStorage.getItem("tasks") &&
-    localStorage.setItem("tasks", JSON.stringify({ tasks: [] }));
+    localStorage.setItem("tasks", JSON.stringify([]));
   nav_tasks.style.fontWeight = "600";
   update_tasks(false);
 })();

@@ -7,25 +7,26 @@
       content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1"
     />
     <title>Taskify</title>
-    <link rel="stylesheet" href="static/styles/style.css" />
+    <link rel="stylesheet" href="src/css/main.css" />
+    <!-- <script defer src="src/js/script.js"></script> -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
+    <script type="module" src="src/js/controller.js" />
   </head>
   <body>
-    <header>
-      <div class="add">Add new task</div>
+    <header class="header">
+      <div class="add" data-screen="add">Add new task</div>
       <nav>
         <ul class="list">
-          <li id="nav_tasks">
+          <li data-screen="tasks">
             <div class="icon-list">📝</div>
             Tasks
           </li>
-
-          <li id="nav_completed">
+          <li data-screen="completed">
             <div class="icon-list">✅</div>
             Completed
           </li>
@@ -35,12 +36,11 @@
     <main></main>
     <section class="add-new">
       <h1 class="title">Add new task</h1>
-      <form method="POST" id="new-task-form" name="add-task" class="add-form">
+      <form method="POST" class="add-form">
         <label for="task">Task</label>
         <input type="text" name="task" id="task" required />
         <button type="submit" class="add-submit">Submit</button>
       </form>
     </section>
-    <script src="static/scripts/script.js"></script>
   </body>
 </html>
